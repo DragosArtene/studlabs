@@ -1,6 +1,7 @@
 package com.proiect.colectiv.controller;
 
 import com.proiect.colectiv.config.JwtTokenUtil;
+import com.proiect.colectiv.dto.ForgotPasswordDTO;
 import com.proiect.colectiv.dto.LoginUserDTO;
 import com.proiect.colectiv.dto.UserDTO;
 import com.proiect.colectiv.model.*;
@@ -78,13 +79,13 @@ public class LoginController {
 
     @CrossOrigin
     @RequestMapping(value = "/forgot-password", method = RequestMethod.POST)
-    public User resetPassword(@RequestParam String email) throws UnsupportedEncodingException, MessagingException {
+    public User resetPassword(@RequestBody ForgotPasswordDTO email) throws UnsupportedEncodingException, MessagingException {
         String plainPassword = RandomStringUtils.randomAlphanumeric(7);
         String encryptedPassword = passwordEncoder.encode(plainPassword);
-        User updatedAccount = userService.updateUserPassword(email, encryptedPassword);
+        User updatedAccount = userService.updateUserPassword(email.getEmail(), encryptedPassword);
         mailService.sendEmail(updatedAccount.getEmail(), plainPassword);
 
-        return userRepository.findByEmail(email);
+        return userRepository.findByEmail(email.getEmail());
 
     }
 
