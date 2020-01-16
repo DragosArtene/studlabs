@@ -70,7 +70,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/api/register/**", "/api/auth", "/api/logout", "/api/forgot-password").permitAll()
+                .antMatchers("/", "/api/register/**", "/api/auth", "/api/logout", "/api/forgot-password","/api/register-admin").permitAll()
                 .antMatchers("/users/**").hasAuthority("USER")
                 .antMatchers("/api/users/**").hasAuthority("USER")
                 .anyRequest().authenticated();
