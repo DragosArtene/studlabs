@@ -3,6 +3,7 @@ package com.proiect.colectiv.controller;
 import com.proiect.colectiv.config.JwtTokenUtil;
 import com.proiect.colectiv.dto.ForgotPasswordDTO;
 import com.proiect.colectiv.dto.LoginUserDTO;
+import com.proiect.colectiv.dto.ResetPasswordDTO;
 import com.proiect.colectiv.dto.UserDTO;
 import com.proiect.colectiv.model.*;
 import com.proiect.colectiv.repository.UserRepository;
@@ -114,10 +115,10 @@ public class LoginController {
     @CrossOrigin
     @PreAuthorize("hasAuthority('USER')")
     @RequestMapping(value = "/change-password", method = RequestMethod.POST)
-    public void changePassword(@RequestParam String newPassword) throws Exception {
+    public void changePassword(@RequestBody ResetPasswordDTO resetPasswordDTO) throws Exception {
 
         User user = userRepository.findById(SecurityUtils.getCurrentUserID());
-        String encodedP = passwordEncoder.encode(newPassword);
+        String encodedP = passwordEncoder.encode(resetPasswordDTO.getNewPassword());
         userRepository.updateUserPassword(user.getId(),encodedP);
     }
 
