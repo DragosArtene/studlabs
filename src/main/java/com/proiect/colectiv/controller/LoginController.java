@@ -183,6 +183,20 @@ public class LoginController {
         return userService.save(user);
     }
 
+    @RequestMapping(value = "/register-admin", method = RequestMethod.POST)
+    public @ResponseBody User registerAdmin(@RequestBody UserDTO userDTO) {
+        User user = new User();
+        user.setUsername(userDTO.getUsername());
+        user.setEmail(userDTO.getEmail());
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        String encryptedPassword = passwordEncoder.encode(userDTO.getPassword());
+        user.setPassword(encryptedPassword);
+        user.setRole(Role.ADMINISTRATOR);
+
+        return userService.save(user);
+    }
+
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
