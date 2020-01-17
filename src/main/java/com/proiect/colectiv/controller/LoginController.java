@@ -102,15 +102,6 @@ public class LoginController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @CrossOrigin
-    @PreAuthorize("hasAuthority('USER')  or hasAuthority('ADMINISTRATOR') ")
-    @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
-    @ModelAttribute("currentUser")
-    public ResponseEntity<?> getCurrentUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        CurrentUser userPrincipal = (CurrentUser) authentication.getPrincipal();
-        return (userPrincipal == null) ? ResponseEntity.badRequest().build() : ResponseEntity.ok(new ApiResponse(userPrincipal.getUsername(), userPrincipal.getId()).toString());
-    }
 
     @CrossOrigin
     @PreAuthorize("hasAuthority('USER')")
