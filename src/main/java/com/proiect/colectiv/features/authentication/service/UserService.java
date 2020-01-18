@@ -2,6 +2,7 @@ package com.proiect.colectiv.features.authentication.service;
 
 import com.proiect.colectiv.features.authentication.model.User;
 import com.proiect.colectiv.features.authentication.repository.UserRepository;
+import com.proiect.colectiv.features.authentication.utils.SecurityUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,8 +31,28 @@ public class UserService {
         return userRepository.findUserByUsername(username);
     }
 
+    public String getFullName() {
+        User user = userRepository.findById(SecurityUtils.getCurrentUserID());
+
+        String fullName = user.getFirstName() + " " + user.getLastName();
+
+        return fullName;
+    }
+
+    public String getEmail() {
+        User user = userRepository.findById(SecurityUtils.getCurrentUserID());
+
+        //String email = user.getEmail();
+
+        return user.getEmail();
+    }
+
     public Optional<User> findById(Long id) {
 
+        return userRepository.findById(id);
+    }
+
+    public User findUserById(long id) {
         return userRepository.findById(id);
     }
 
@@ -63,11 +84,12 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User updateUserPassword(String email,String password){
+    public User updateUserPassword(String email, String password) {
 
-        User user=userRepository.findByEmail(email);
-        userRepository.updateUserPassword(user.getId(),password);
+        User user = userRepository.findByEmail(email);
+        userRepository.updateUserPassword(user.getId(), password);
 
         return userRepository.findByEmail(user.getEmail());
     }
+
 }

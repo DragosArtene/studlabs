@@ -19,10 +19,10 @@ public class ForumConverter {
         this.tagConverter = tagConverter;
     }
 
-
     public Forum toEntity(ForumDTO forumDTO) {
         Forum forum = new Forum();
 
+        forum.setTitle(forumDTO.getTitle());
         forum.setText(forumDTO.getText());
         forum.setType(forumDTO.getType());
         forum.setUserId(SecurityUtils.getCurrentUserID());
@@ -36,6 +36,7 @@ public class ForumConverter {
     public ForumDTO toDto(Forum forum) {
         ForumDTO forumDTO = new ForumDTO();
 
+        forumDTO.setTitle(forum.getTitle());
         forumDTO.setText(forum.getText());
         forumDTO.setType(forum.getType());
         //forumDTO.setUserId(forum.getUserId());

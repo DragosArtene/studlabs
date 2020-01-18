@@ -21,6 +21,8 @@ public class Forum {
     @GeneratedValue
     private int id;
 
+    private String title;
+
     @Column(columnDefinition = "LONGTEXT")
     private String text;
 
@@ -30,10 +32,6 @@ public class Forum {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "forum", cascade = CascadeType.MERGE)
     private List<Comments> comments;
-
-
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "forum", cascade = CascadeType.MERGE)
-//    private List<ForumTag> tags;
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
@@ -50,15 +48,17 @@ public class Forum {
 
     private int rating;
 
-
     private long userId;
 
-    public Forum(String text, ForumType type, LocalDate createdOn, List<Comments> comments, List<Tag> tags, long userId) {
+
+    public Forum(String title, String text, ForumType type, LocalDate createdOn, List<Comments> comments, List<Tag> tags, int rating, long userId) {
+        this.title = title;
         this.text = text;
         this.type = type;
         this.createdOn = createdOn;
         this.comments = comments;
         this.tags = tags;
+        this.rating = rating;
         this.userId = userId;
     }
 
@@ -71,4 +71,5 @@ public class Forum {
         this.rating = rating;
         this.userId = userId;
     }
+
 }

@@ -83,7 +83,7 @@ public class LoginController {
 
     @CrossOrigin
     @RequestMapping(value = "/forgot-password", method = RequestMethod.POST)
-    public User resetPassword(@RequestBody ForgotPasswordDTO email) throws UnsupportedEncodingException, MessagingException {
+    public @ResponseBody User resetPassword(@RequestBody ForgotPasswordDTO email) throws UnsupportedEncodingException, MessagingException {
         String plainPassword = RandomStringUtils.randomAlphanumeric(7);
         String encryptedPassword = passwordEncoder.encode(plainPassword);
         User updatedAccount = userService.updateUserPassword(email.getEmail(), encryptedPassword);
@@ -109,7 +109,7 @@ public class LoginController {
     @CrossOrigin
     @PreAuthorize("hasAuthority('USER')")
     @RequestMapping(value = "/change-password", method = RequestMethod.POST)
-    public void changePassword(@RequestBody ResetPasswordDTO resetPasswordDTO) throws Exception {
+    public @ResponseBody void changePassword(@RequestBody ResetPasswordDTO resetPasswordDTO) throws Exception {
 
         User user = userRepository.findById(SecurityUtils.getCurrentUserID());
         String encodedP = passwordEncoder.encode(resetPasswordDTO.getNewPassword());
@@ -189,6 +189,26 @@ public class LoginController {
         user.setRole(Role.ADMINISTRATOR);
 
         return userService.save(user);
+    }
+
+//    @PreAuthorize("hasAuthority('ADMINISTRATOR')")
+    @RequestMapping(value="/get-user",method=RequestMethod.GET)
+    public @ResponseBody User getUser(@RequestParam long id){
+       return userService.findUserById(id);
+    }
+
+
+    @PreAuthorize("hasAuthority('USER') ")
+    @RequestMapping(value="/fullname",method=RequestMethod.GET)
+    public @ResponseBody String getFullname(){
+        return userService.getFullName();
+    }
+
+
+    @PreAuthorize("hasAuthority('USER') ")
+    @RequestMapping(value="/email",method=RequestMethod.GET)
+    public @ResponseBody String getEmail(){
+        return userService.getEmail();
     }
 
 

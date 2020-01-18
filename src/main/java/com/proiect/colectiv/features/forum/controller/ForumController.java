@@ -38,11 +38,11 @@ public class ForumController {
         return forumService.getAll();
     }
 
-    @PreAuthorize("hasAuthority('USER')")
-    @RequestMapping(value = "/tag", method = RequestMethod.GET)
-    public List<Forum> getAllForumsByTag(@RequestBody Tag tag) {
-        return forumService.getAllByTag(tag);
-    }
+//    @PreAuthorize("hasAuthority('USER')")
+//    @RequestMapping(value = "/tag", method = RequestMethod.GET)
+//    public List<Forum> getAllForumsByTag(@RequestBody Tag tag) {
+//        return forumService.getAllByTag(tag);
+//    }
 
     @PreAuthorize("hasAuthority('USER')")
     @RequestMapping(value = "/comments", method = RequestMethod.GET)
@@ -50,7 +50,7 @@ public class ForumController {
         return forumService.getNoComments(forumId);
     }
 
-    @PreAuthorize("hasAuthority('USER')")
+    @PreAuthorize("hasAuthority('ADMINISTRATOR')")
     @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public void removeForum(@RequestParam int forumId) throws Exception {
         forumService.deleteForum(forumId);

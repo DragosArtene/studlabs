@@ -1,5 +1,7 @@
 package com.proiect.colectiv.features.forum.service;
 
+import com.proiect.colectiv.features.authentication.model.User;
+import com.proiect.colectiv.features.authentication.utils.SecurityUtils;
 import com.proiect.colectiv.features.forum.converter.ForumConverter;
 import com.proiect.colectiv.features.forum.dto.ForumDTO;
 import com.proiect.colectiv.features.forum.model.Comments;
@@ -88,7 +90,6 @@ public class ForumService {
 
         Forum forum = forumRepository.findById(forumId);
 
-
         if (forum == null) {
             throw new Exception("Forum with given id does not exist.");
         } else {
@@ -128,25 +129,13 @@ public class ForumService {
     public void downvoteForum(int forumId) throws Exception {
         Forum forum = forumRepository.findById(forumId);
 
+
         if (forum == null) {
             throw new Exception("Forum with given id does not exist.");
         } else {
             forum.setRating(forum.getRating() - 1);
         }
-    }
 
-    public List<Forum> getAllByTag(Tag tag) {
-
-
-        List<Forum> forums = forumRepository.findAllByTags(tagRepository.findByName(tag.getName()));
-
-
-//        List<ForumTag> tags=forumTagRepository.findByName(tag.getName());
-//
-//        List<Forum> forums=forumRepository.findAllByTags(tags);
-
-
-        return forums;
 
     }
 

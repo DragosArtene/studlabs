@@ -1,7 +1,7 @@
 package com.proiect.colectiv.features.forum.model;
 
 public enum ForumType {
-    OPEN(0), VALIDATED(1), SOLVED(3);
+    OPEN(0), SOLVED(1);
 
     private int value;
 

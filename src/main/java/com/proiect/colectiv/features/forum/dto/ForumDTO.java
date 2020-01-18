@@ -15,6 +15,7 @@ import java.util.List;
 public class ForumDTO {
 
     private String text;
+    private String title;
     private ForumType type;
     private List<TagDTO> tags;
     private int rating;
