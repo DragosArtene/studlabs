@@ -1,6 +1,6 @@
 package com.proiect.colectiv.config;
 
-import com.proiect.colectiv.service.MailService;
+import com.proiect.colectiv.features.authentication.service.MailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.TaskExecutor;

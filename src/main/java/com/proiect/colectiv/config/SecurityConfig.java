@@ -1,5 +1,7 @@
 package com.proiect.colectiv.config;
 
+import com.proiect.colectiv.features.authentication.config.JwtAuthenticationEntryPoint;
+import com.proiect.colectiv.features.authentication.config.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
