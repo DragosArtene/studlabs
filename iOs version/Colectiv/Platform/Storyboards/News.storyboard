@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WM0-fo-gGw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="5d4-U5-aK0">
+            <objects>
+                <viewController storyboardIdentifier="News" id="WM0-fo-gGw" customClass="NewsViewController" customModule="Colectiv" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mpj-vy-tFc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ubb" translatesAutoresizingMaskIntoConstraints="NO" id="4Ae-0U-Gxn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Bc0-I6-O82"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News regarding UBB" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-Nf-cfX">
+                                <rect key="frame" x="20" y="243.5" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QsG-sa-Ms6">
+                                <rect key="frame" x="0.0" y="300" width="414" height="596"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="124" id="K0t-5q-rSa" customClass="NewsCellView" customModule="Colectiv" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K0t-5q-rSa" id="uqG-8W-Lj0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labels" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-dX-g8O">
+                                                    <rect key="frame" x="20" y="15" width="136" height="94"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="136" id="caA-IG-YzW"/>
+                                                        <constraint firstAttribute="height" constant="94" id="tGp-lm-yUz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook did something really really really bad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdr-GD-9it">
+                                                    <rect key="frame" x="166" y="15" width="238" height="41"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-gb-kV3">
+                                                    <rect key="frame" x="166" y="66" width="238" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gdr-GD-9it" firstAttribute="leading" secondItem="W4i-dX-g8O" secondAttribute="trailing" constant="10" id="2S8-Su-6zN"/>
+                                                <constraint firstAttribute="bottom" secondItem="mbi-gb-kV3" secondAttribute="bottom" constant="15" id="3AL-K6-qBC"/>
+                                                <constraint firstAttribute="bottom" secondItem="W4i-dX-g8O" secondAttribute="bottom" constant="15" id="DnW-5o-0O0"/>
+                                                <constraint firstItem="W4i-dX-g8O" firstAttribute="leading" secondItem="uqG-8W-Lj0" secondAttribute="leading" constant="20" id="E5g-lO-uxY"/>
+                                                <constraint firstItem="mbi-gb-kV3" firstAttribute="top" secondItem="gdr-GD-9it" secondAttribute="bottom" constant="10" id="ESf-We-1Tt"/>
+                                                <constraint firstItem="W4i-dX-g8O" firstAttribute="top" secondItem="uqG-8W-Lj0" secondAttribute="top" constant="15" id="UxU-bn-10h"/>
+                                                <constraint firstItem="gdr-GD-9it" firstAttribute="top" secondItem="uqG-8W-Lj0" secondAttribute="top" constant="15" id="dUl-JF-o8q"/>
+                                                <constraint firstAttribute="trailing" secondItem="gdr-GD-9it" secondAttribute="trailing" constant="10" id="fUD-pp-zpr"/>
+                                                <constraint firstAttribute="trailing" secondItem="mbi-gb-kV3" secondAttribute="trailing" constant="10" id="occ-dw-En2"/>
+                                                <constraint firstItem="mbi-gb-kV3" firstAttribute="leading" secondItem="W4i-dX-g8O" secondAttribute="trailing" constant="10" id="sQc-Ad-bwj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsHeadlineDescription" destination="mbi-gb-kV3" id="Aqt-EQ-T5q"/>
+                                            <outlet property="newsHeadlineTitle" destination="gdr-GD-9it" id="YXo-e5-eqP"/>
+                                            <outlet property="newsImageView" destination="W4i-dX-g8O" id="AVZ-3t-sxU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WM0-fo-gGw" id="kaj-Dv-UuV"/>
+                                    <outlet property="delegate" destination="WM0-fo-gGw" id="I0i-g5-h6S"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QsG-sa-Ms6" secondAttribute="bottom" id="BXF-3Y-dAt"/>
+                            <constraint firstItem="oPx-Nf-cfX" firstAttribute="trailing" secondItem="4Ae-0U-Gxn" secondAttribute="trailing" constant="-20" id="IRt-hD-cvD"/>
+                            <constraint firstItem="oPx-Nf-cfX" firstAttribute="leading" secondItem="4Ae-0U-Gxn" secondAttribute="leading" constant="20" id="Nya-7I-8ST"/>
+                            <constraint firstItem="QsG-sa-Ms6" firstAttribute="top" secondItem="4Ae-0U-Gxn" secondAttribute="bottom" id="ShM-gw-wwr"/>
+                            <constraint firstItem="QsG-sa-Ms6" firstAttribute="leading" secondItem="fv1-9J-LRj" secondAttribute="leading" id="WYs-CY-wTJ"/>
+                            <constraint firstItem="fv1-9J-LRj" firstAttribute="trailing" secondItem="4Ae-0U-Gxn" secondAttribute="trailing" id="Wg4-qa-rcU"/>
+                            <constraint firstItem="oPx-Nf-cfX" firstAttribute="bottom" secondItem="4Ae-0U-Gxn" secondAttribute="bottom" constant="-30" id="Xov-l9-hfd"/>
+                            <constraint firstAttribute="top" secondItem="4Ae-0U-Gxn" secondAttribute="top" id="ceN-i8-jYO"/>
+                            <constraint firstItem="fv1-9J-LRj" firstAttribute="trailing" secondItem="QsG-sa-Ms6" secondAttribute="trailing" id="ioi-M1-yGu"/>
+                            <constraint firstItem="4Ae-0U-Gxn" firstAttribute="leading" secondItem="fv1-9J-LRj" secondAttribute="leading" id="yL4-fZ-YiO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fv1-9J-LRj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="paperplane.fill" catalog="system" id="zga-7P-9iW"/>
+                    <navigationItem key="navigationItem" title="News" id="dHx-fZ-VrC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="headLineImageView" destination="4Ae-0U-Gxn" id="Mtk-CU-V6j"/>
+                        <outlet property="headLineTitle" destination="oPx-Nf-cfX" id="h7h-UB-0DB"/>
+                        <outlet property="tableView" destination="QsG-sa-Ms6" id="zUo-kS-Llx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKR-5V-jGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="-147"/>
+        </scene>
+        <!--News Details View Controller-->
+        <scene sceneID="yIa-eP-vfv">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetails" hidesBottomBarWhenPushed="YES" id="rRn-st-unq" customClass="NewsDetailsViewController" customModule="Colectiv" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Msb-CJ-wJj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFg-kI-wh2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMB-x3-dd3">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="4318"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laptop" translatesAutoresizingMaskIntoConstraints="NO" id="FAh-om-bi4">
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="NV9-u3-hKB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkQ-JP-DZX">
+                                                <rect key="frame" x="10" y="270" width="386" height="81.5"/>
+                                                <string key="text">Zuckerberg is panckieZuckerberg is panckieZuckerberg is panckieZuckerberg is panckieZuckerberg is panckieZuckerberg is panckieZuckerberg is panckie</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qas-yC-m1o">
+                                                <rect key="frame" x="10" y="356.5" width="386" height="1"/>
+                                                <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="rZE-NH-WDs"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS5-IX-VIb">
+                                                <rect key="frame" x="10" y="362.5" width="386" height="3915.5"/>
+                                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="gkQ-JP-DZX" firstAttribute="leading" secondItem="rMB-x3-dd3" secondAttribute="leading" constant="10" id="46v-Am-fcm"/>
+                                            <constraint firstAttribute="trailing" secondItem="gkQ-JP-DZX" secondAttribute="trailing" constant="10" id="8Sj-pW-z9q"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qas-yC-m1o" secondAttribute="trailing" constant="10" id="Bde-qx-VwF"/>
+                                            <constraint firstItem="Qas-yC-m1o" firstAttribute="top" secondItem="gkQ-JP-DZX" secondAttribute="bottom" constant="5" id="I6y-ta-JRy"/>
+                                            <constraint firstItem="yS5-IX-VIb" firstAttribute="top" secondItem="Qas-yC-m1o" secondAttribute="bottom" constant="5" id="Qum-mw-qzP"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yS5-IX-VIb" secondAttribute="bottom" constant="40" id="UYu-10-pw8"/>
+                                            <constraint firstAttribute="trailing" secondItem="FAh-om-bi4" secondAttribute="trailing" id="ePe-eC-ybh"/>
+                                            <constraint firstAttribute="trailing" secondItem="yS5-IX-VIb" secondAttribute="trailing" constant="10" id="gDg-tA-Wzm"/>
+                                            <constraint firstItem="FAh-om-bi4" firstAttribute="leading" secondItem="rMB-x3-dd3" secondAttribute="leading" id="hPA-j2-IRn"/>
+                                            <constraint firstItem="gkQ-JP-DZX" firstAttribute="top" secondItem="FAh-om-bi4" secondAttribute="bottom" constant="20" id="muT-Jf-z2Z"/>
+                                            <constraint firstItem="Qas-yC-m1o" firstAttribute="leading" secondItem="rMB-x3-dd3" secondAttribute="leading" constant="10" id="q0z-44-HhL"/>
+                                            <constraint firstItem="FAh-om-bi4" firstAttribute="top" secondItem="rMB-x3-dd3" secondAttribute="top" id="t7l-3t-IPp"/>
+                                            <constraint firstItem="yS5-IX-VIb" firstAttribute="leading" secondItem="rMB-x3-dd3" secondAttribute="leading" constant="10" id="xgQ-vS-2cw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rMB-x3-dd3" firstAttribute="leading" secondItem="HFg-kI-wh2" secondAttribute="leading" id="1d6-EG-ENa"/>
+                                    <constraint firstItem="rMB-x3-dd3" firstAttribute="top" secondItem="HFg-kI-wh2" secondAttribute="top" id="Fee-xO-w9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="rMB-x3-dd3" secondAttribute="trailing" id="cQw-hh-QSF"/>
+                                    <constraint firstAttribute="bottom" secondItem="rMB-x3-dd3" secondAttribute="bottom" id="epP-VR-I24"/>
+                                    <constraint firstItem="rMB-x3-dd3" firstAttribute="height" secondItem="HFg-kI-wh2" secondAttribute="height" priority="255" id="fje-Ou-42o"/>
+                                    <constraint firstItem="rMB-x3-dd3" firstAttribute="width" secondItem="HFg-kI-wh2" secondAttribute="width" multiplier="0.980676" id="m7K-dh-BFl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HFg-kI-wh2" firstAttribute="leading" secondItem="Msb-CJ-wJj" secondAttribute="leading" id="G6S-Xu-k7v"/>
+                            <constraint firstAttribute="bottom" secondItem="HFg-kI-wh2" secondAttribute="bottom" id="W7z-oO-PoK"/>
+                            <constraint firstItem="HFg-kI-wh2" firstAttribute="trailing" secondItem="nbc-E9-VuD" secondAttribute="trailing" id="Z3x-va-wCk"/>
+                            <constraint firstItem="HFg-kI-wh2" firstAttribute="top" secondItem="Msb-CJ-wJj" secondAttribute="top" id="mZh-S0-ILD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nbc-E9-VuD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DpA-c5-5DW"/>
+                    <connections>
+                        <outlet property="newsHeadlineLabel" destination="gkQ-JP-DZX" id="ncb-ng-RlV"/>
+                        <outlet property="newsImageView" destination="FAh-om-bi4" id="1Aw-Pc-4tt"/>
+                        <outlet property="newsTextLabel" destination="yS5-IX-VIb" id="xEY-IA-BQB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXv-zY-2FX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369.5652173913045" y="-147.32142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="labels" width="512" height="512"/>
+        <image name="laptop" width="1280" height="659"/>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+        <image name="ubb" width="1280" height="960"/>
+    </resources>
+</document>
