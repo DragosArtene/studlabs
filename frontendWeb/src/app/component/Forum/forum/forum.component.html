@@ -1,0 +1,9 @@
+<body class ="body-b">
+<div id="container">
+<input type="text" placeholder="  Search" name="searchText" class="t" [(ngModel)]="srcText">
+
+<app-forum-item *ngFor="let forumItem of items"
+                  [item]="forumItem">
+  </app-forum-item>
+</div>
+</body>

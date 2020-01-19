@@ -1,0 +1,29 @@
+
+<mat-card>
+  <div class="example-container">
+    <mat-card-title> </mat-card-title>
+    <mat-form-field>
+      <input matInput placeholder="Category"  type="text" class="form-control" [(ngModel)]="category">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Description"  type="text" class="form-control" [(ngModel)]="description" >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Difficulty</mat-label>
+      <mat-select  [(ngModel)]="difficulty"><mat-option *ngFor="let level of levels" [value]="level">{{level}}</mat-option></mat-select>
+    </mat-form-field>
+
+  </div>
+  <mat-card-actions>
+  </mat-card-actions>
+  <mat-card-actions>
+    <button  mat-raised-button color="primary" style="margin-right:100px;" (click)="editQuestion(idQuestion,category,description,difficulty,deprecated)">Update</button>
+    <button  mat-raised-button color="primary" style="margin-right:100px;" (click)="removeQuestion(idQuestion)">Delete</button>
+  </mat-card-actions>
+
+</mat-card>
+
+
+
+

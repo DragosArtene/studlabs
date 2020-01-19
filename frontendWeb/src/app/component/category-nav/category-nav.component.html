@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar ><mat-toolbar-row><span><div id="imgcontainer"><img src="./assets/pictures/81344110_162318118373732_5749251017791242240_n.png" alt="Avatar" class="avatar"></div></span></mat-toolbar-row></mat-toolbar>
+    <mat-toolbar-row>
+      <span> <mat-action-list>
+        <button  [routerLink]="['']"><p class="text">Quizzes Admin</p></button>
+
+    </mat-action-list></span>
+    </mat-toolbar-row>
+
+
+    <mat-toolbar-row><span><mat-action-list>
+      <button  [routerLink]="['quizzes']"><p class="text">Quizzes</p> </button>
+    </mat-action-list>
+    </span></mat-toolbar-row>
+
+    <mat-toolbar-row><span> <mat-action-list>
+      <button  [routerLink]="['news']"><p class="text">News</p></button>
+    </mat-action-list></span></mat-toolbar-row>
+    <mat-toolbar-row><span><mat-action-list>
+      <button  [routerLink]="['forum']"><p class="text">Forum</p></button>
+    </mat-action-list></span></mat-toolbar-row>
+
+    <mat-toolbar-row><span></span></mat-toolbar-row> <mat-toolbar-row><span><mat-action-list>
+      <button  [routerLink]="['login']"><p class="text">Login</p></button>
+    </mat-action-list></span></mat-toolbar-row>
+    <mat-toolbar-row><span></span></mat-toolbar-row>
+
+
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <!-- Add Content Here -->
+    <router-outlet> </router-outlet>
+<!--      <app-gridview></app-gridview>se pune automat de la quizzez din meniu??-->
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

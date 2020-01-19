@@ -1,0 +1,27 @@
+#container{
+  width: 960px;
+  margin: 0 auto;
+}
+.body-b{
+  background-color: #00394d;
+}
+
+input[type=text]{
+  background-image: url("search.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 2% 50% ;
+  background-color: rgb(36,59,85);
+  width: 100%;
+  padding: 12px 0px 12px 50px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(43,70,100);
+  box-sizing: border-box;
+  border-radius:25px;
+  text-align: left;
+}
+
+div{
+  display: block;
+}

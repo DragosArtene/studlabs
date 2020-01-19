@@ -1,0 +1,33 @@
+<div class="quiz">
+<mat-card >
+  <div class="example-container">
+  <mat-card-title *ngIf="idquiz!=-1">{{this.quiz.category}}</mat-card-title>
+  <mat-form-field>
+    <input matInput placeholder="Category"  type="text" class="form-control" [(ngModel)]="category">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Timer in minutes"  type="text" class="form-control" value= "{{time}}"[(ngModel)]="time" >
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Difficulty</mat-label>
+    <mat-select  [(ngModel)]="difficulty"><mat-option *ngFor="let level of levels" [value]="level">{{level}}</mat-option></mat-select>
+  </mat-form-field>
+    <mat-slide-toggle [(ngModel)]="isPublic" >Public</mat-slide-toggle>
+<!--    <mat-slide-toggle [(ngModel)]="isRandom" >Random</mat-slide-toggle>-->
+
+  </div>
+  <mat-card-actions>
+    <button *ngIf="idquiz!=-1" mat-raised-button color="primary" style="margin-right:100px;" (click)="editQuiz(idquiz,category,time, difficulty,isPublic,isRandom)">Update</button>
+    <button *ngIf="idquiz!=-1" mat-raised-button color="primary" style="margin-right:100px;" (click)="removeQuiz(idquiz)">Delete</button>
+  </mat-card-actions>
+  <mat-card-actions>
+    <button *ngIf="idquiz==-1" mat-raised-button color="primary" style="margin-right:100px;"  (click)="addQuiz(category,time, difficulty,isPublic,isRandom)">ADD</button>
+  </mat-card-actions>
+
+</mat-card>
+<div *ngIf="idquiz">
+<app-questions [idQuiz]="idquiz"></app-questions>
+</div>
+</div>
+

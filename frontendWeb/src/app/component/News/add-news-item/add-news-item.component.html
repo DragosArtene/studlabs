@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" *ngIf="show===true">
+  <div class="container">
+
+    <input type="text" placeholder="Title" required [(ngModel)]="title" name="title" class="t">
+
+    <textarea placeholder="Text" required [(ngModel)]="text" name="text"></textarea>
+
+    <input type="text" text="multimedia" placeholder="  Path" [(ngModel)]="multimedia" name="multimedia" class="p">
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="addbtn" >Add</button>
+    </div>
+  </div>
+</form>

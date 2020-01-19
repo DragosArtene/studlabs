@@ -1,0 +1,13 @@
+<body class="color">
+<div id="container" >
+<div id="imgcontainer">
+  <img src="./assets/pictures/logo2.png" alt="Avatar" class="avatar">
+  <button class="addbutton" *ngIf="showAddBtn===true" (click)="clickAdd()">Add News</button>
+</div>
+
+<app-add-news-item *ngIf="showAddForm===true"></app-add-news-item>
+<app-news-item *ngFor="let newsItem of news"
+[newsItem]="newsItem">
+</app-news-item>
+</div>
+</body>

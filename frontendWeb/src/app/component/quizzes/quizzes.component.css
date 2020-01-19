@@ -1,0 +1,20 @@
+.body-b{
+  background-color: #00394d;
+}
+.mat-grid-tile {
+  --mat-grid-tile-width: 300px;
+}
+.avatar{
+
+  width: 40%;
+  length : 40%
+}
+.example-header-image {
+  background-image: url("src/assets/pictures/48387057_273554680179957_5392286656504004608_n.png");
+  background-size: cover;
+}
+
+.example-card {
+  min-width: 220px;
+  min-height: 60px;
+}

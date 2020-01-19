@@ -1,0 +1,84 @@
+.container{
+  margin-bottom: 15px;
+  margin-left: 0px;
+  float:left;
+  overflow: hidden;
+  display: block;
+  vertical-align: baseline;
+  line-height: 1;
+  padding:10px;
+  border-bottom: rgb(77,70,70) solid 0.016px;
+  color:antiquewhite;
+}
+
+.title{
+  display: inline-block;
+}
+
+.chips{
+  background-color: rgb(58,77,99);
+}
+
+#t{
+  margin: 20px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 22px;
+  padding-left: 20px;
+  float: left;
+  color: #AEACA4;
+}
+
+#rating{
+  color: green;
+  font-size: medium;
+  float: left;
+  padding-left: 10px;
+}
+
+.row{
+  display: inline-block;
+}
+
+.tags{
+  margin:0;
+  padding: 0;
+  line-height: 22px;
+  padding-left: 20px;
+  float: left;
+  font-size: small;
+  color: darkgray;
+}
+
+#com{
+  float: left;
+  padding-left: 10px;
+  margin: 0;
+}
+
+#btn{
+  background-image: url("comment.png");
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+input[type=textarea]{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 2% 50% ;
+  background-color: rgb(36,59,85);
+  width: 60%;
+  float:right;
+  padding: 12px 0px 12px 50px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(43,70,100);
+  box-sizing: border-box;
+  border-radius:25px;
+  text-align: left;
+  height: 60px;
+}

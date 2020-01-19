@@ -1,0 +1,28 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+.avatar{
+
+  width: 70%;
+  length : 80%
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.text{
+  font-size: 23px;
+}
+.example-header-image {
+  background-image: url("src/assets/pictures/48387057_273554680179957_5392286656504004608_n.png");
+  background-size: cover;
+}

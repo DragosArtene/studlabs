@@ -1,0 +1,40 @@
+
+<body>
+
+<div *ngIf="result" class="center-divquestions" >
+<mat-card *ngIf="endflag==false" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{currentQuestion.description}}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+
+ <div *ngFor="let control of favAnswers.controls; let i = index; ">
+   <mat-checkbox [formControl]="control" type="checkbox" id="inlineCheckbox{{i}}" >{{answersForCurrentQuestion[i].text}}</mat-checkbox>
+
+ </div>
+
+  </mat-card-content>
+
+  <mat-card-actions >
+
+    <button mat-button mat-raised-button color="primary" style="margin-right: fill" *ngIf ="endquestionsflag==false" (click)="next()">Next</button>
+    <button mat-button mat-raised-button color="primary" style="margin-right:100px;" *ngIf ="endquestionsflag==true" (click)="finishQuiz()">Finish Quiz</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+
+<div *ngIf="endflag==true" class="center-div" >
+  <mat-card ><p class="text" style="align-content: center ">You scored {{this.score}}/{{this.quiz.completionRate}} !</p></mat-card>
+
+</div>
+
+
+<div *ngIf="endflag==true" class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+</body>

@@ -1,0 +1,11 @@
+.container{
+  display: inline-block;
+  font-size: small;
+  padding-left: 40px;
+}
+
+
+b{
+  padding-right: 15px;
+  color: #AEACA4;
+}

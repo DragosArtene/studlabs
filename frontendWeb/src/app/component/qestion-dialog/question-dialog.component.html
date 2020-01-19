@@ -1,0 +1,21 @@
+<div mat-dialog-content>
+<mat-card>
+  <div class="example-container">
+    <mat-card-title> </mat-card-title>
+    <mat-form-field>
+      <input matInput placeholder="Category"  type="text" class="form-control" [(ngModel)]="this.category">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Description"  type="text" class="form-control" [(ngModel)]="this.description" >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Difficulty</mat-label>
+      <mat-select  [(ngModel)]="this.difficulty"><mat-option *ngFor="let level of levels" [value]="level">{{level}}</mat-option></mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <button mat-button mat-raised-button color="primary" style="margin-right:100px;" (click)="closeD()">ok</button>
+</mat-card>
+</div>

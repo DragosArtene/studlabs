@@ -1,0 +1,22 @@
+<div class="news-post">
+  <h2 class="title">
+    {{ newsItem.title }}
+  </h2>
+  <div>
+    <span class="date">{{ newsItem.createdOn}}</span>
+  </div>
+  <div class="entry_clearfix">
+    <div style="float: left; margin-right: 16px" class="image_container">
+      <img src="{{newsItem.multimedia}}">
+    </div>
+    <div *ngIf="readMore===true">
+      {{(newsItem.text | slice:0:400) + '...'}}
+    </div>
+    <div *ngIf="readMore===false">
+      {{newsItem.text }}
+    </div>
+    <div class="readMore" *ngIf="readMore===true">
+      <button type="button" (click)="onClick()">Read More</button>
+    </div>
+  </div>
+</div>

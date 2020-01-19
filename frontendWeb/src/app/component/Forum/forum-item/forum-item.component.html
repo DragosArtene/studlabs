@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="title">
+    <p id="rating">{{item.rating}}</p>
+    <p id="t">{{ item.title }}</p>
+    <p style="float: right; color: #4682B4; margin-left: 500px;">{{item.username}}</p>
+  </div>
+  <div class="row'">
+    <p id="com"><button id="btn" (click)="onClick()"><i class="img">{{ item.comments.length}}</i></button></p>
+    <p class="tags"><mat-chip-list >
+      <mat-chip class="chips" *ngFor="let tag of item.tags">{{tag}}</mat-chip>
+    </mat-chip-list></p>
+  </div>
+
+  <div id="text" style="padding: 20px; display: inline-block; color: #AEACA4;">{{item.text}}</div>
+
+  <div class="comments" *ngIf="comm===true">
+    <app-comment-item *ngFor="let com of item.comments" [comment]="com" ></app-comment-item>
+  </div>
+  <div >
+    <input type="textarea" placeholder="Leave a comment" name="comment" class="t" [(ngModel)]="newComment">
+  </div>
+</div>
+
+

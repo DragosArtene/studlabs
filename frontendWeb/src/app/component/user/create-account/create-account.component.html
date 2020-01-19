@@ -1,0 +1,28 @@
+<form  (ngSubmit)="onSubmit()">
+  <div class="imgcontainer">
+    <img src="./assets/pictures/logocs.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+
+    <input type="text" placeholder="First name" required [(ngModel)]="fname" name="fname">
+
+    <input type="text" placeholder="Last name" required [(ngModel)]="lname" name="lname">
+
+    <input type="text" placeholder="Email" required [(ngModel)]="email" name="email">
+
+    <input type="text" placeholder="Username" required [(ngModel)]="username" name="username">
+
+    <input type="password" placeholder="Enter Password" required [(ngModel)]="pswd" name="psw">
+
+    <input type="password" placeholder="Repeat Password" required [(ngModel)]="pswd2" name="pswd2">
+
+
+    <p style="color:white">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <a routerLink="/" ><button type="button" class="cancelbtn" >Cancel</button></a>
+      <button type="submit" class="signupbtn"  >Sign Up</button>
+    </div>
+  </div>
+</form>

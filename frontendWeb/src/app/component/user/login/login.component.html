@@ -1,0 +1,33 @@
+
+<body  class="body-b">
+<form method="post" (ngSubmit)="onSubmit()">
+  <div class="imgcontainer">
+    <img src="./assets/pictures/logocs.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <input type="text" placeholder="Username" name="uname" required id="username" [(ngModel)]="usrname">
+
+    <input type="password" placeholder="Password" name="psw" required id="password" [(ngModel)]="pswd">
+
+    <button type="submit" (click)="loginapp()" >Login</button>
+    <a routerLink="/" ><button type="button" class="cancelbtn" >Cancel</button></a>
+
+
+  </div>
+
+  <div class="forgot" >
+    <nav>
+      <a routerLink="/forgot-password">Forgot your password?</a> |
+      <a routerLink="/create-account">Create Account</a>
+    </nav>
+  </div>
+
+</form>
+
+</body>
+
+
+
+
+

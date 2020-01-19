@@ -1,0 +1,29 @@
+<body class="body-b">
+<div *ngIf="divflag" >
+
+<mat-grid-list cols="4"  gutterSize="10" rowHeight="100px">
+  <mat-grid-tile
+    *ngFor="let tile of quizzes"
+    [colspan]="spec"
+    [rowspan]="spec"
+   [routerLink]="['/quiz', tile.idQuiz]"  (click)="flag()" >
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title > {{tile.category}}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+
+
+
+
+  </mat-grid-tile>
+  <mat-grid-tile    [routerLink]="['/quiz', -1]">
+    <mat-card class="example-card"><mat-card-title style="align-content: center">Add Quiz</mat-card-title></mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+</div>
+
+</body>

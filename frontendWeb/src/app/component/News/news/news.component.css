@@ -1,0 +1,37 @@
+#imgcontainer{
+  margin:0;
+  height: 80px;
+  padding: 20px 0;
+  display: block;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+div{
+  display: block;
+}
+
+.addbutton{
+  float: right;
+  padding-top: 24px;
+  margin : 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background-color: rgb(0,78,146);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius:25px;
+}
+
+#container{
+  width: 960px;
+  margin: 0 auto;
+
+}
+.color{
+  background-color: #00394d;
+}
